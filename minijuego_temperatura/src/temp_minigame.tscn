@@ -1,0 +1,122 @@
+[gd_scene load_steps=9 format=3 uid="uid://d4bxoax041lwy"]
+
+[ext_resource type="Script" path="res://minijuego_temperatura/src/temp_minigame.gd" id="1_ffkf6"]
+[ext_resource type="Texture2D" uid="uid://ccpaw6ydxtubt" path="res://minijuego_temperatura/ui/background.png" id="1_up4a1"]
+[ext_resource type="Theme" uid="uid://dx01wfvlrxl12" path="res://minijuego_temperatura/ui/ui_theme.tres" id="2_6a1ij"]
+[ext_resource type="Script" path="res://Scripts/device_selection.gd" id="4_65chk"]
+[ext_resource type="Script" path="res://minijuego_temperatura/src/volume_db.gd" id="5_7c2ss"]
+[ext_resource type="Texture2D" uid="uid://cmr0nh7hxuglp" path="res://minijuego_temperatura/ui/bar/background.png" id="6_ohm5u"]
+[ext_resource type="Texture2D" uid="uid://1758eli8bkcf" path="res://minijuego_temperatura/ui/bar/foreground.png" id="7_8gm33"]
+
+[sub_resource type="AudioStreamMicrophone" id="AudioStreamMicrophone_1ewul"]
+
+[node name="Temperature Minigame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_up4a1")
+expand_mode = 1
+
+[node name="content" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_6a1ij")
+script = ExtResource("1_ffkf6")
+
+[node name="mic_input" type="AudioStreamPlayer" parent="content"]
+stream = SubResource("AudioStreamMicrophone_1ewul")
+autoplay = true
+bus = &"Player1"
+
+[node name="ui" type="HBoxContainer" parent="content"]
+layout_mode = 2
+
+[node name="recording_controls" type="VBoxContainer" parent="content/ui"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="device_selection" type="OptionButton" parent="content/ui/recording_controls"]
+layout_mode = 2
+clip_text = true
+script = ExtResource("4_65chk")
+
+[node name="sep2" type="HSeparator" parent="content/ui/recording_controls"]
+layout_mode = 2
+
+[node name="play_button" type="Button" parent="content/ui/recording_controls"]
+layout_mode = 2
+text = "Play audio"
+
+[node name="sep" type="HSeparator" parent="content/ui/recording_controls"]
+layout_mode = 2
+
+[node name="sep" type="VSeparator" parent="content/ui"]
+layout_mode = 2
+
+[node name="live_audio" type="VBoxContainer" parent="content/ui"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("5_7c2ss")
+
+[node name="monitors" type="HBoxContainer" parent="content/ui/live_audio"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="temperature_bar" type="TextureProgressBar" parent="content/ui/live_audio/monitors"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+min_value = 100.0
+max_value = 200.0
+step = 10.0
+value = 100.0
+fill_mode = 3
+nine_patch_stretch = true
+stretch_margin_left = 20
+stretch_margin_top = 20
+stretch_margin_right = 20
+stretch_margin_bottom = 20
+texture_under = ExtResource("6_ohm5u")
+texture_progress = ExtResource("7_8gm33")
+
+[node name="volume_bar" type="TextureProgressBar" parent="content/ui/live_audio/monitors"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+min_value = 100.0
+max_value = 200.0
+step = 5.0
+value = 100.0
+fill_mode = 3
+nine_patch_stretch = true
+stretch_margin_left = 20
+stretch_margin_top = 20
+stretch_margin_right = 20
+stretch_margin_bottom = 20
+texture_under = ExtResource("6_ohm5u")
+texture_progress = ExtResource("7_8gm33")
+
+[node name="InstructionLabel" type="Label" parent="content/ui/live_audio/monitors"]
+layout_mode = 2
+text = "GRITA!!!!"
+
+[node name="sep" type="HSeparator" parent="content/ui/live_audio"]
+layout_mode = 2
+
+[connection signal="item_selected" from="content/ui/recording_controls/device_selection" to="content/ui/recording_controls/device_selection" method="_on_device_selection_item_selected"]
+[connection signal="pressed" from="content/ui/recording_controls/play_button" to="content" method="_on_play_button_pressed"]

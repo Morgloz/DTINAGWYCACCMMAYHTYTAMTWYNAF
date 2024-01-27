@@ -10,26 +10,20 @@ config_version=5
 
 [application]
 
-config/name="Definitively Not Overcooked"
-run/main_scene="res://kitchen.tscn"
-config/features=PackedStringArray("4.2", "Mobile")
+config/name="DTINAGWYCACCMMAYHTYTAMTWYNAF"
+run/main_scene="res://minijuego_temperatura/src/temp_minigame.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
-[display]
+[audio]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+driver/enable_input=true
 
-[dotnet]
+[autoload]
 
-project/assembly_name="Definitively Not Overcooked"
-
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
+SceneSwitcher="*res://scene_switcher.gd"
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

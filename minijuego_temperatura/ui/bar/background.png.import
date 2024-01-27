@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jgrqc76yqnc4"
-path="res://.godot/imported/kitchen_tiles.png-74ab574367f74a94085afa37932cd535.ctex"
+uid="uid://cmr0nh7hxuglp"
+path="res://.godot/imported/background.png-6e5591a85a2baa74f843973d1ea37493.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/kitchen_tiles.png"
-dest_files=["res://.godot/imported/kitchen_tiles.png-74ab574367f74a94085afa37932cd535.ctex"]
+source_file="res://minijuego_temperatura/ui/bar/background.png"
+dest_files=["res://.godot/imported/background.png-6e5591a85a2baa74f843973d1ea37493.ctex"]
 
 [params]
 

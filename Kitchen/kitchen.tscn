@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bj3y1f6f1is0f"]
 
-[ext_resource type="Texture2D" uid="uid://jgrqc76yqnc4" path="res://Assets/kitchen_tiles.png" id="1_66r5f"]
-[ext_resource type="PackedScene" uid="uid://dsmm5eibg1a4x" path="res://not_mickey.tscn" id="2_c4blu"]
+[ext_resource type="Texture2D" uid="uid://jgrqc76yqnc4" path="res://Kitchen/Assets/kitchen_tiles.png" id="1_66r5f"]
+[ext_resource type="PackedScene" uid="uid://dsmm5eibg1a4x" path="res://Kitchen/not_mickey.tscn" id="2_c4blu"]
 
 [node name="Kitchen" type="Node2D"]
 

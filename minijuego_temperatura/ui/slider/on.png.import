@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bldhp0iqd7dhd"
-path="res://.godot/imported/character_left.png-6ec20e57c4c1fa5a5511b3c70324a369.ctex"
+uid="uid://b1iyd8ab7gsdv"
+path="res://.godot/imported/on.png-ca23062f2cc8f96e50a76851137bc917.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/character_left.png"
-dest_files=["res://.godot/imported/character_left.png-6ec20e57c4c1fa5a5511b3c70324a369.ctex"]
+source_file="res://minijuego_temperatura/ui/slider/on.png"
+dest_files=["res://.godot/imported/on.png-ca23062f2cc8f96e50a76851137bc917.ctex"]
 
 [params]
 

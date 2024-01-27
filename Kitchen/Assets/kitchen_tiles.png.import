@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjvew1bk8n6dk"
-path="res://.godot/imported/character_right.png-e30d8f3e0cfada4879c86a88766ac5a4.ctex"
+uid="uid://jgrqc76yqnc4"
+path="res://.godot/imported/kitchen_tiles.png-168599f019bb71bbb8d8d9bf82b3bc8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/character_right.png"
-dest_files=["res://.godot/imported/character_right.png-e30d8f3e0cfada4879c86a88766ac5a4.ctex"]
+source_file="res://Kitchen/Assets/kitchen_tiles.png"
+dest_files=["res://.godot/imported/kitchen_tiles.png-168599f019bb71bbb8d8d9bf82b3bc8f.ctex"]
 
 [params]
 
