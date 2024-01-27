@@ -13,7 +13,7 @@ func _physics_process(delta):
 	
 	if direction != Vector2():
 		if not moving:
-			$AnimationPlayer.play("WalkingRight")
+			$AnimationPlayer.play("Walking")
 			moving = true
 		if not flipped and direction.x < 0:
 			$NotMickeySprite.flip_h = true
@@ -25,6 +25,6 @@ func _physics_process(delta):
 		$AnimationPlayer.stop()
 		moving = false
 	
-	velocity = direction * 500
+	velocity = direction * 1000
 	move_and_slide()
 	
